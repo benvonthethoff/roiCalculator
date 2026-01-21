@@ -18,7 +18,7 @@ export default function Step1CompanyInfo({
   };
 
   return (
-    <div className="bg-white rounded-lg p-8 shadow-sm">
+    <div className="bg-[#f2ece3] rounded-lg p-8 shadow-sm">
       <h2 className="text-2xl font-semibold mb-6">Company Information</h2>
 
       <div className="space-y-4">
@@ -31,7 +31,7 @@ export default function Step1CompanyInfo({
             type="number"
             value={data.employeeCount || ""}
             onChange={(e) => handleChange("employeeCount", Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter employee count"
           />
         </div>
@@ -45,7 +45,7 @@ export default function Step1CompanyInfo({
             type="number"
             value={data.dependents || ""}
             onChange={(e) => handleChange("dependents", Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter average dependents"
           />
         </div>
@@ -59,7 +59,7 @@ export default function Step1CompanyInfo({
             type="number"
             value={data.eapSpend || ""}
             onChange={(e) => handleChange("eapSpend", Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter EAP spend"
           />
         </div>
@@ -73,7 +73,7 @@ export default function Step1CompanyInfo({
             type="number"
             value={data.averageSalary || ""}
             onChange={(e) => handleChange("averageSalary", Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter average salary"
           />
         </div>
@@ -87,7 +87,7 @@ export default function Step1CompanyInfo({
             type="number"
             value={data.healthPlanSpend || ""}
             onChange={(e) => handleChange("healthPlanSpend", Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter health plan spend"
           />
         </div>
@@ -101,7 +101,7 @@ export default function Step1CompanyInfo({
             type="number"
             value={data.turnoverRate || ""}
             onChange={(e) => handleChange("turnoverRate", Number(e.target.value))}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter turnover rate"
           />
         </div>

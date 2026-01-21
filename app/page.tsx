@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import StepIndicator from "@/components/StepIndicator";
+import TimingEstimate from "@/components/TimingEstimate";
 import Step1CompanyInfo from "@/components/Step1CompanyInfo";
 import Step2ContactInfo from "@/components/Step2ContactInfo";
 import Step3Results from "@/components/Step3Results";
@@ -59,7 +60,9 @@ export default function Home() {
   return (
     <main className="min-h-screen py-12 px-4">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">ROI Calculator</h1>
+        <h1 className="text-3xl font-bold text-center mb-4">ROI Calculator</h1>
+
+        <TimingEstimate />
 
         <div className="mb-8">
           <StepIndicator currentStep={currentStep} />

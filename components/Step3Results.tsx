@@ -21,7 +21,7 @@ export default function Step3Results({ results, onStartOver }: Step3ResultsProps
   };
 
   return (
-    <div className="bg-white rounded-lg p-8 shadow-sm">
+    <div className="bg-[#f2ece3] rounded-lg p-8 shadow-sm">
       <h2 className="text-2xl font-semibold mb-6">Your ROI Results</h2>
 
       <div className="space-y-6">

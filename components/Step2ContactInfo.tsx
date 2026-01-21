@@ -30,7 +30,7 @@ export default function Step2ContactInfo({
   };
 
   return (
-    <div className="bg-white rounded-lg p-8 shadow-sm">
+    <div className="bg-[#f2ece3] rounded-lg p-8 shadow-sm">
       <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -43,7 +43,7 @@ export default function Step2ContactInfo({
             type="text"
             value={data.firstName}
             onChange={(e) => handleChange("firstName", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter first name"
           />
         </div>
@@ -57,7 +57,7 @@ export default function Step2ContactInfo({
             type="text"
             value={data.lastName}
             onChange={(e) => handleChange("lastName", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter last name"
           />
         </div>
@@ -71,7 +71,7 @@ export default function Step2ContactInfo({
             type="email"
             value={data.email}
             onChange={(e) => handleChange("email", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter email address"
           />
         </div>
@@ -85,7 +85,7 @@ export default function Step2ContactInfo({
             type="text"
             value={data.company}
             onChange={(e) => handleChange("company", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter company name"
           />
         </div>
@@ -99,7 +99,7 @@ export default function Step2ContactInfo({
             type="text"
             value={data.jobTitle}
             onChange={(e) => handleChange("jobTitle", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter job title"
           />
         </div>
@@ -113,7 +113,7 @@ export default function Step2ContactInfo({
             type="tel"
             value={data.phone}
             onChange={(e) => handleChange("phone", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             placeholder="Enter phone number"
           />
         </div>
@@ -126,7 +126,7 @@ export default function Step2ContactInfo({
           <select
             value={data.country}
             onChange={(e) => handleChange("country", e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
           >
             <option value="">Select a country</option>
             {countries.map((country) => (
