@@ -1,9 +1,8 @@
 export interface CompanyInfo {
   employeeCount: number;
-  dependents: number;
-  eapSpend: number;
   averageSalary: number;
-  healthPlanSpend: number;
+  eapSpend: number;
+  absenteeismRate: number;
   turnoverRate: number;
 }
 

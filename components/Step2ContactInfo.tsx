@@ -9,16 +9,6 @@ interface Step2ContactInfoProps {
   onBack: () => void;
 }
 
-const countries = [
-  "United States",
-  "Canada",
-  "United Kingdom",
-  "Australia",
-  "Germany",
-  "France",
-  "Other",
-];
-
 export default function Step2ContactInfo({
   data,
   onChange,
@@ -30,14 +20,14 @@ export default function Step2ContactInfo({
   };
 
   return (
-    <div className="bg-[#f2ece3] rounded-lg p-8 shadow-sm">
+    <div className="bg-[#f2ece3] rounded-lg p-8 shadow-sm h-full flex flex-col">
       <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* First Name */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            First Name
+          <label className="block text-sm font-semibold text-gray-900 mb-1">
+            First Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -50,8 +40,8 @@ export default function Step2ContactInfo({
 
         {/* Last Name */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Last Name
+          <label className="block text-sm font-semibold text-gray-900 mb-1">
+            Last Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -64,8 +54,8 @@ export default function Step2ContactInfo({
 
         {/* Email */}
         <div className="md:col-span-2">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Email Address
+          <label className="block text-sm font-semibold text-gray-900 mb-1">
+            Email <span className="text-red-500">*</span>
           </label>
           <input
             type="email"
@@ -78,8 +68,8 @@ export default function Step2ContactInfo({
 
         {/* Company */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Company
+          <label className="block text-sm font-semibold text-gray-900 mb-1">
+            Company <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -92,7 +82,7 @@ export default function Step2ContactInfo({
 
         {/* Job Title */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-semibold text-gray-900 mb-1">
             Job Title
           </label>
           <input
@@ -106,8 +96,8 @@ export default function Step2ContactInfo({
 
         {/* Phone */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Phone Number
+          <label className="block text-sm font-semibold text-gray-900 mb-1">
+            Phone <span className="text-red-500">*</span>
           </label>
           <input
             type="tel"
@@ -118,38 +108,23 @@ export default function Step2ContactInfo({
           />
         </div>
 
-        {/* Country */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Country
-          </label>
-          <select
-            value={data.country}
-            onChange={(e) => handleChange("country", e.target.value)}
-            className="w-full px-4 py-2 bg-white border border-black rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
-          >
-            <option value="">Select a country</option>
-            {countries.map((country) => (
-              <option key={country} value={country}>
-                {country}
-              </option>
-            ))}
-          </select>
-        </div>
       </div>
 
-      <div className="mt-8 flex gap-4">
+      <p className="text-sm text-gray-600 mt-6 mb-4">* Required field</p>
+
+      <div className="mt-auto pt-4 flex gap-4">
         <button
           onClick={onBack}
-          className="flex-1 bg-gray-100 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+          className="flex-1 bg-gray-100 text-gray-700 py-3 px-6 rounded-lg text-lg font-semibold hover:bg-gray-200 transition-colors"
         >
-          Back
+          ← Back
         </button>
         <button
           onClick={onNext}
-          className="flex-1 bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+          className="flex-1 bg-primary text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-all group"
         >
-          View Results
+          Calculate My Savings
+          <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
         </button>
       </div>
     </div>
