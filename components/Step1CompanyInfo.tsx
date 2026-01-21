@@ -21,7 +21,9 @@ export default function Step1CompanyInfo({
     <div className="bg-[#f2ece3] rounded-lg p-8 shadow-sm">
       <h2 className="text-2xl font-semibold mb-6">Company Information</h2>
 
-      <div className="space-y-4">
+      {/* Section 1 - Basic Information */}
+      <h3 className="text-lg font-semibold mb-4">Employee Information</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Employee Count */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -49,7 +51,11 @@ export default function Step1CompanyInfo({
             placeholder="Enter average dependents"
           />
         </div>
+      </div>
 
+      {/* Section 2 - Financial Information */}
+      <h3 className="text-lg font-semibold mt-8 mb-4">Financial Information</h3>
+      <div className="space-y-4">
         {/* EAP Spend */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
